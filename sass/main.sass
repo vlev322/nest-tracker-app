@@ -1,0 +1,362 @@
+@import ./slider
+
+html, body
+  margin: 0
+  padding: 0
+body
+  font-family: Montserrat
+  font-weight: bold
+  color: #000
+
+header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background: rgb(237, 213, 90)
+  padding-left: 50px
+  ul
+    display: flex
+    li
+      text-transform: uppercase
+      list-style-type: none
+      margin-right: 80px
+      a
+        white-space: nowrap
+        text-decoration: none
+        color: #000000
+  img
+    height: 80px
+    width: auto
+
+.main-wrapper
+  >section
+    padding: 50px
+    height: 100vh
+    &:first-child
+      margin: 0
+      padding: 0
+      background-image: url('../assets/img/bg_&_logos/welcome_bg.jpg')
+      background-size: cover
+      background-position-y: 70%
+      h1
+        font-size: 48px
+        margin: 0px
+        text-transform: uppercase
+        font-weight: bolder
+      h2
+        font-size: 25px
+        margin-top: 15px
+      >div
+        display: flex
+        justify-content: space-around
+        align-items: flex-start
+        margin-top: 10%
+        font-size: 40px
+        img
+          height: 500px
+          width: auto
+        section
+          text-align: center
+          img
+            height: 80px
+            width: auto
+.main-wrapper
+  >section
+    &:last-child
+      margin: 0
+      padding: 0
+      background-image: url('../assets/img/bg_&_logos/сontact_us_bg.jpg')
+      background-size: cover
+.slides-page
+  display: flex
+  flex-direction: column
+  transition: all 0.5s ease
+  padding-bottom: 20px
+  div
+    transition: all 0.5s ease
+    height: 60vh
+    margin-left: 20px
+    text-align: right
+    img
+      height: 100%
+      transition: all 0.5s ease
+      width: auto
+      border-radius: 5px
+    &:hover
+      z-index: 1
+      margin-right: -30px
+      margin-top: -20px
+    &:last-child
+      text-align: left
+      transition: all 0.5s ease
+      margin-top: -200px
+
+//Contact us
+.contact-us
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  aside
+    position: absolute
+    left: 0
+    top: 0
+    width: 300px
+    background-color: rgba(255, 255, 255, .6)
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: start
+    flex-direction: column
+    img
+      margin-top: 100px
+      height: 80px
+      width: auto
+    a
+      text-decoration: none
+      color: #000000
+      font-weight: 500
+      font-size: 15px
+      margin-top: 20px
+    h3
+      margin-bottom: 0
+      font-size: 18px
+    section
+      margin-top: 30px
+      text-align: center
+      p
+        margin: 0
+        font-weight: 500
+      h3
+        font-size: 16px
+form
+  max-width: 805px
+  margin: 0 auto
+  h2
+    font-size: 40px
+    text-align: center
+    font-weight: bolder
+  div input
+    height: 40px
+    width: 330px
+    background-color: #ffffff
+    padding-left: 5px
+    font-size: 16px
+    margin-bottom: 30px
+    border: none
+    margin-right: 35px
+    &::-webkit-input-placeholder
+      color: #000000
+    &::-moz-placeholder
+      color: #000000
+    &:-moz-placeholder
+      color: #000000
+    &:-ms-input-placeholder
+      color: #000000
+  div
+    input:last-child
+      margin-right: 0
+  button
+    text-transform: uppercase
+    background-color: rgb(237, 213, 90)
+    padding: 40px 90px
+    font-weight: bold
+    font-size: 18px
+    margin-top: 25px
+    border: none
+    cursor: pointer
+  .textarea
+    width: 707px
+    height: 80px
+    padding-top: 10px
+    padding-left: 5px
+    font: medium -moz-fixed
+    font: -webkit-small-control
+    resize: both
+    overflow: auto
+    background-color: #fff
+    font-size: 16px
+    margin-right: 0
+
+// Media
+@media only screen and (max-width : 1200px)
+  .main-wrapper >section
+    &:first-child
+      h1
+        font-size: 40px
+      >div
+        img
+          height: 400px
+  form
+    margin: 0
+    margin-right: 20px
+    div input
+      margin-right: 15px
+    .textarea
+      max-width: 688px
+// Medium Devices, Desktops
+@media only screen and (max-width : 992px)
+  .slider-container
+    height: 500px
+  .thumbnails-wrapper
+    max-width: 900px
+  .main-wrapper >section
+    &:first-child
+      h1
+        font-size: 30px
+      >div
+        img
+          height: 350px
+  header ul li
+    margin-right: 60px
+  form
+    margin: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    div
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      margin-right: 50px
+      input
+        margin-right: 0
+    .textarea
+      flex-direction: row
+      align-items: start
+      max-width: 330px
+      margin-right: 50px
+
+@media only screen and (max-width : 840px)
+  header ul li
+    margin-right: 40px
+  .slider-container
+    height: 400px
+  .thumbnails-wrapper
+    max-width: 800px
+  form
+    margin-right: 0
+    div
+      margin-right: 20px
+    .textarea
+      max-width: 330px
+      margin-right: 20px
+@media only screen and (max-width : 768px)
+  .main-wrapper >section
+    &:first-child
+      h1
+        font-size: 25px
+      h2
+        font-size: 18px
+      >div
+        img
+          height: 300px
+  header ul li
+    margin-right: 15px
+    font-size: 14px
+  .slider-container
+    height: 350px
+  .thumbnails-wrapper
+    max-width: 750px
+    margin-top: 20px
+    #scroller
+      display: none
+  .thumbnails div
+    height: 150px
+    width: 250px
+  .slides-page div
+    height: 53vh
+  form
+    align-items: flex-end
+    div
+      margin-right: 20px
+    .textarea
+      max-width: 330px
+      margin-right: 20px
+    button
+      margin-right: 20px
+    h2
+      font-size: 30px
+  .contact-us
+    aside
+      width: 250px
+@media only screen and (max-width : 640px)
+  .slider-container
+    height: 300px
+    .control-left, .control-right
+      font-size: 60px
+  .thumbnails-wrapper
+    max-width: 630px
+  .thumbnails div
+    height: 120px
+    width: 200px
+  .slides-page
+    padding: 0
+    div
+      height: 38vh
+      text-align: center
+      &:last-child
+        margin-top: -100px
+  form
+    div
+      margin-right: 20px
+      input
+        width: 250px
+    .textarea
+      max-width: 250px
+      margin-right: 20px
+    button
+      margin-right: 20px
+    h2
+      font-size: 25px
+  .contact-us
+    aside
+      width: 200px
+
+@media only screen and (max-width : 480px)
+  .main-wrapper >section
+    &:first-child
+      >div
+        flex-direction: column-reverse
+        align-items: center
+  header
+    padding-left: 5px
+    ul
+      padding-left: 0
+      li
+        margin-right: 10px
+        font-size: 12px
+  .slider-container
+    height: 250px
+    .control-left, .control-right
+      font-size: 50px
+  .thumbnails-wrapper
+    max-width: 450px
+  .thumbnails div
+    height: 80px
+    width: 130px
+  .slides-page
+    div
+      height: 30vh
+      text-align: center
+      max-width: 400px
+      &:last-child
+        margin-top: -100px
+  form
+    div
+      margin-right: 10px
+      input
+        width: 230px
+    .textarea
+      max-width: 230px
+      margin-right: 10px
+    button
+      margin-right: 10px
+      font-size: 16px
+      padding: 40px 95px
+    h2
+      font-size: 18px
+  .contact-us
+    aside
+      width: 150px
+// @media only screen and (max-width : 320px)

@@ -1,0 +1,88 @@
+
+.slider-container
+  height: 550px
+  max-width: 950px
+  margin: 0 auto
+  position: relative
+  .control-left, .control-right
+    position: absolute
+    cursor: pointer
+    height: 100%
+    transition: all .5s
+    top: 0
+    color: #c3c3c3
+    font-size: 80px
+    font-weight: normal
+    z-index: 3
+    display: flex
+    align-items: center
+    &:hover
+      background-color: rgba(000, 000, 000, .2)
+      color: rgb(237, 213, 90)
+  .control-left
+    left: 0
+    padding-left: 5px
+  .control-right
+    right: 0
+    padding-right: 5px
+    text-align: right
+  .slide
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    cursor: zoom-in
+    img
+      height: -webkit-fill-available
+      width: -webkit-fill-available
+.thumbnails
+  overflow-y: scroll
+  display: -webkit-box
+  display: -moz-box
+  div
+    height: 170px
+    width: 300px
+    background: lightblue
+    margin: 0 12px
+    cursor: pointer
+    &:first-child
+      margin-left: 0
+    img
+      height: 100%
+      width: auto
+
+  &::-webkit-scrollbar
+    width: 0px
+    height: 0px
+
+.thumbnails-wrapper
+  margin: 0 auto
+  max-width: 950px
+  #scroller
+    position: relative
+    height: 1px
+    background: #000
+    margin: 20px 0
+    div
+      position: absolute
+      height: 20px
+      width: 60px
+      border-radius: 3px
+      background-color: #464545
+      top: -9px
+      cursor: pointer
+.slider-container.full-screen
+  .slide
+    height: 100vh
+    width: 100vw
+    top: 0
+    left: 0
+    z-index: 2
+    position: fixed
+    cursor: zoom-out
+  .control-left, .control-right
+    position: fixed
+  .control-left
+    left: 30px
+  .control-right
+    right: 30px

@@ -1,0 +1,102 @@
+.slider-container {
+  height: 550px;
+  max-width: 950px;
+  margin: 0 auto;
+  position: relative; }
+  .slider-container .control-left, .slider-container .control-right {
+    position: absolute;
+    cursor: pointer;
+    height: 100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    top: 0;
+    color: #c3c3c3;
+    font-size: 80px;
+    font-weight: normal;
+    z-index: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .slider-container .control-left:hover, .slider-container .control-right:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+      color: #edd55a; }
+  .slider-container .control-left {
+    left: 0;
+    padding-left: 5px; }
+  .slider-container .control-right {
+    right: 0;
+    padding-right: 5px;
+    text-align: right; }
+  .slider-container .slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in; }
+    .slider-container .slide img {
+      height: -webkit-fill-available;
+      width: -webkit-fill-available; }
+
+.thumbnails {
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -moz-box; }
+  .thumbnails div {
+    height: 170px;
+    width: 300px;
+    background: lightblue;
+    margin: 0 12px;
+    cursor: pointer; }
+    .thumbnails div:first-child {
+      margin-left: 0; }
+    .thumbnails div img {
+      height: 100%;
+      width: auto; }
+  .thumbnails::-webkit-scrollbar {
+    width: 0px;
+    height: 0px; }
+
+.thumbnails-wrapper {
+  margin: 0 auto;
+  max-width: 950px; }
+  .thumbnails-wrapper #scroller {
+    position: relative;
+    height: 1px;
+    background: #000;
+    margin: 20px 0; }
+    .thumbnails-wrapper #scroller div {
+      position: absolute;
+      height: 20px;
+      width: 60px;
+      border-radius: 3px;
+      background-color: #464545;
+      top: -9px;
+      cursor: pointer; }
+
+.slider-container.full-screen .slide {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  position: fixed;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out; }
+.slider-container.full-screen .control-left, .slider-container.full-screen .control-right {
+  position: fixed; }
+.slider-container.full-screen .control-left {
+  left: 30px; }
+.slider-container.full-screen .control-right {
+  right: 30px; }
+
+/*# sourceMappingURL=slider.css.map */
