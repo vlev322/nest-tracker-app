@@ -248,7 +248,9 @@ header img {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   height: 60vh;
+  max-width: 900px;
   margin-left: 20px;
+  margin-left: 200px;
   text-align: right;
 }
 .slides-page div img {
@@ -267,6 +269,7 @@ header img {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   margin-top: -200px;
+  margin-left: 50px;
 }
 
 .contact-us {
@@ -332,7 +335,7 @@ header img {
 
 form {
   max-width: 805px;
-  margin-right: 100px;
+  margin-right: 200px;
 }
 form h2 {
   font-size: 40px;
